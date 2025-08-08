@@ -1,10 +1,24 @@
-import React from "react";
+import React, { useEffect } from "react";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 const About = () => {
+  useEffect(() => {
+    Aos.init({
+      offset: 200,
+      duration: 900,
+      easing: "ease-in-sine",
+      delay: 300,
+    });
+  }, []);
+
   return (
-    <section className="bg-[#f5e4c8] py-12 sm:py-16 px-4 sm:px-6 md:px-12 lg:px-16">
+    <section
+      className="bg-[#f5e4c8] py-12 sm:py-16 px-4 sm:px-6 md:px-12 lg:px-16"
+      data-aos="fade-up"
+    >
       <div className="container mx-auto flex flex-col md:flex-row items-center md:items-start gap-8 md:gap-12">
-        <div className="flex-1">
+        <div className="flex-1" data-aos="fade-right">
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif text-[#556b4e] mb-4 sm:mb-6">
             About
           </h2>
@@ -18,7 +32,7 @@ const About = () => {
           />
         </div>
 
-        <div className="flex-1 flex flex-col justify-center mt-6 md:mt-12 lg:mt-36">
+        <div className="flex-1 flex flex-col justify-center mt-6 md:mt-12 lg:mt-36" data-aos="fade-left">
           <p className="text-[#556b4e] leading-relaxed text-base sm:text-lg">
             At Felix O. Nguyen, we are dedicated to sustainable interior design,
             incorporating eco-friendly elements into every project. Our mission
