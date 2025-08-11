@@ -5,8 +5,8 @@ import Home from './pages/Home';
 import Contact from './pages/Contact';
 import AboutUs from './pages/AboutUs';
 import Portfolio from './pages/Portfolio';
-import UseBlog from '../../dealer-portfolio/src/components/UseBlog';
-import BlogDetails from '../../dealer-portfolio/src/components/BlogDetails';
+import UseBlog from './pages/UseBlog';
+import BlogDetails from './pages/BlogDetails';
 function App() {
   return (
     <div>
