@@ -4,19 +4,17 @@ import Services from "./Services";
 import Portfolio from "./Portfolio";
 import ContactUs from "./Contact";
 
-
 const Hero = () => {
-  
   return (
     <div>
       <section
-        className="relative bg-cover bg-center min-h-screen flex items-center px-4 sm:px-6 md:px-12 lg:px-16 py-8 sm:py-12"
+        className="relative bg-cover bg-center h-screen max-w-screen flex items-center justify-start px-4 sm:px-6 md:px-12 lg:px-16"
         style={{
           backgroundImage:
             "url('https://static.wixstatic.com/media/88aac0_287c9dc70f8b4097829ea25993fe092d~mv2.png')",
         }}
       >
-        <div className="bg-white/80 backdrop-blur-sm p-4 sm:p-6 lg:p-8 rounded-md shadow-md max-w-sm sm:max-w-md md:max-w-lg">
+        <div className="bg-white/80 backdrop-blur-sm p-4 sm:p-6 lg:p-8 rounded-md shadow-md max-w-sm sm:max-w-md md:max-w-lg text-center md:text-left">
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-serif text-[#556b4e] leading-tight">
             Holistic <br /> Green <br /> Interiors
           </h1>

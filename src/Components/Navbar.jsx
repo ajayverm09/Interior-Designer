@@ -18,10 +18,11 @@ const Navbar = () => {
         </div>
         <div className="hidden md:flex space-x-7 text-lg">
           <Link to="/">Home</Link>
-          <Link to="/about">About</Link>
+          <Link to="/aboutus">About</Link>
           <Link to="/contact">Contact</Link>
           <Link to="/portfolio">Portfolio</Link>
-          <Link to="/staff">Our Staff</Link>
+          <Link to="/blog">Blogs</Link>
+
         </div>
       </div>
       {menuOpen && (
@@ -30,7 +31,7 @@ const Navbar = () => {
           <Link to="/about" onClick={() => setMenuOpen(false)}>About</Link>
           <Link to="/contact" onClick={() => setMenuOpen(false)}>Contact</Link>
           <Link to="/portfolio" onClick={() => setMenuOpen(false)}>Portfolio</Link>
-          <Link to="/staff" onClick={() => setMenuOpen(false)}>Our Staff</Link>
+          <Link to="/blog" onClick={() => setMenuOpen(false)}>Blogs</Link>
         </div>
       )}
     </nav>

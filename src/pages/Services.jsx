@@ -51,7 +51,7 @@ const Services = () => {
               <div
                 key={index}
                 onClick={() => setActiveIndex(index)}
-                className={`bg-white p-3 rounded-lg shadow-lg cursor-pointer transition-all duration-500 ease-in-out transform
+                className={`relative bg-white p-3 rounded-lg shadow-lg cursor-pointer transition-all duration-500 ease-in-out transform
                   ${isActive ? "scale-110 z-20 blur-0" : "scale-95 blur-sm opacity-70 z-10"}
                   ${tilt}`}
                 style={{
@@ -65,6 +65,15 @@ const Services = () => {
                   alt={service.title}
                   className="w-44 h-60 object-cover rounded-md shadow"
                 />
+
+                {/* Show overlay "Click me" only on inactive cards on hover */}
+                {!isActive && (
+                  <div className="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity rounded-md">
+                    <span className="text-white font-semibold text-lg select-none pointer-events-none">
+                      Click me
+                    </span>
+                  </div>
+                )}
               </div>
             );
           })}

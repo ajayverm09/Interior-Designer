@@ -1,4 +1,6 @@
-import React from "react";
+import React, { useEffect } from "react";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 const Portfolio = () => {
   const projects = [
@@ -29,16 +31,31 @@ const Portfolio = () => {
     },
   ];
 
+  useEffect(() => {
+    Aos.init({
+      offset: 200,
+      duration: 900,
+      easing: "ease-in-sine",
+      delay: 300,
+    });
+  }, []);
+
   return (
     <section className="bg-[#5b6248] py-12 sm:py-16 px-4 sm:px-6 md:px-12 lg:px-16">
-      <h2 className="text-center text-3xl sm:text-4xl md:text-5xl font-serif text-white mb-8 sm:mb-12">
+      <h2
+        className="text-center text-3xl sm:text-4xl md:text-5xl font-serif text-white mb-8 sm:mb-12"
+        data-aos="fade-down"
+      >
         Portfolio
       </h2>
+
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6 max-w-7xl mx-auto">
         {projects.map((project, i) => (
           <div
             key={i}
             className="relative group cursor-pointer overflow-hidden rounded-lg"
+            data-aos="zoom-in"
+            data-aos-delay={i * 100} 
           >
             <img
               src={project.image}
